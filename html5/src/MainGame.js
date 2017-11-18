@@ -48,7 +48,7 @@ MainGame.prototype.loadAssets = function ()
 
     this.addChild (this.image);
 
-    // add things here
+    // add game later here
 
 }
 
