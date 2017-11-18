@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MineSweeper</title>
+<!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+    <style>
+    /* following three (cascaded) are equivalent to above three meta viewport statements */
+    /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+    /* see http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }                           @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }                                    @viewport { user-zoom: fixed ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+    <script src='lib/pixi.min.4.5.6.js'></script>
+    <script src="lib/Tween.min.js"></script>
+    <script src="lib/client.min.js"></script>
+    <script src="lib/howler.core.min.js"></script>
+    <script src="lib/GameAnalytics.min.js"></script>
+    <script src="https://connect.facebook.net/en_US/fbinstant.4.0.js"></script>
+
+</head>
+<body style="padding:0; margin: 0; overflow:hidden;" onload="init();">
+    <script src="src/data/PlayerInfo.js"></script>
+    <script src="src/data/GameData.js"></script>
+
+    <script src="src/server/server.js"></script>
+    <script src="src/server/ServerCall.js"></script>
+    
+    <script src="src/Config.js"></script>
+    <script src="src/MainGame.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/GameAdManager.js"></script>
+    
+    <!-- Game code -->
+    <script id="game">
+        function init() 
+        {
+            new App();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "instant_games": {
+    "custom_update_templates": {
+      "beat_my_score": {
+        "something": "else"
+      }
+    }
+  }
+}
